@@ -1,10 +1,20 @@
-  <div class="col">
-    <div class="card">
-      <img src="{#image}" class="card-img-top" style="width: 50%; height: 250px; object-position: center;">
-      <div class="card-body">
-        <h5 class="card-title">{#title}</h5>
-        <p class="card-text">Thông tin rỗng!!!</p>
-      </div>
-    </div>
+<div class="card " style="padding-right: 2%;">
+  <img
+    src="{#image}"
+  />
+  <div class="card-body">
+    <h3 class="card-title">{#name}</h3>
+    <p class="card-text">
+      {#infor}
+    </p>
   </div>
+  <ul class="list-group list-group-flush">
+
+    <li class="list-group-item">{#price}</li>
+
+  </ul>
+  <div class="card-body">
+    <button type="button" class="btn btn-warning">Buy</button>
+  </div>
+</div>
   

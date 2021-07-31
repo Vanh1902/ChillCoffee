@@ -1,16 +1,17 @@
 
 let signUp = function()  {
-    let email = document.getElementById("iEmail").value
-    let password = document.getElementById("iPassword").value
-
-    document.getElementById("btnSignUpNew").addEventListener('click', function(){
-        firebase.auth().createUserWithEmailAndPassword(email, password)
+    let email = document.getElementById("exampleInputEmail1").value
+    let password = document.getElementById("exampleInputPassword1").value
+    console.log(email+" day la email");
+    console.log(password+" day la password");
+    firebase.auth().createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
             // Signed in 
             //var user = userCredential.user;
             // ...
             //console.log(userCredential)
             alert("Success")
+            
         })
         .catch((error) => {
             //var errorCode = error.code;
@@ -19,20 +20,20 @@ let signUp = function()  {
             //console.log(error)
             alert(error.message)
         })
-    })
+
 
 }
     
 
 
 let signIn = function(){
-    let email = document.getElementById("iEmail").value
-    let password = document.getElementById("iPassword").value
+    let email = document.getElementById("exampleInputEmail1").value
+    let password = document.getElementById("exampleInputPassword1").value
 
     
-    firebase.auth().signInWithEmailAndPassword(email, password)//Đăng nhập băng email và password
+    firebase.auth().signInWithEmailAndPassword(email, password)
     .then((Success) => {
-        // Signed in 
+        // Signed in    
         //var user = userCredential.user;
         // ...
         //console.log(userCredential)

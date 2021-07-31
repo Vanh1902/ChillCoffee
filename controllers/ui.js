@@ -24,6 +24,11 @@ let getMenu = async function() {
       console.log('pressed Home');
       loadHome()
   });
+  document.getElementById('btnMore').addEventListener('click', ()=>{
+    // this.prev_image();   
+    console.log('pressed More');
+    loadMore()
+});
 
   document.getElementById('btnCategory').addEventListener('click', ()=>{
       // this.prev_image();   
@@ -36,6 +41,7 @@ let getMenu = async function() {
       console.log('pressed Support');
       loadSupport()
   });
+
 
   document.getElementById('btnLogIn').addEventListener('click', async ()=>{
       // this.prev_image();   
@@ -79,6 +85,7 @@ let loadCategory = async function() {
     renderProfile();
 });
 }
+ 
 
 let loadSupport = async function() {
   let response = await fetch("./views/support.html");
@@ -103,6 +110,11 @@ let loadCard = async function() {
   return response.text()
 }
 
+let loadMore = async function() {
+  let response = await fetch("./views/more.html");
+  return response.text()
+}
+
 let renderProfile = async function() {
   let response = await fetch("./views/profile.html");
   let result = await response.text()
@@ -118,15 +130,13 @@ let renderCoffee = async function() {
   let resultAPI = await responseAPI.json()
  
   let data = resultAPI['data']
-  console.log(data)
-  console.log(data.length)
-    // console.log(value) // Log tung san pham
-  //   if(value['title'] === undefined){
-  //     return
-  //   } 
-  //   let card = resultCard.replace('{#title}', value['name'] ).replace('Thông tin rỗng!!!', value['price']) // Thay tung san pham, vao card
 
-  //   document.getElementById('lstCard').innerHTML += card
+    data.map(function(item){
+      let card = resultCard.replace('{#name}', item['name'] ).replace('{#infor}', item['mota']).replace('{#image}',item['img']).replace('{#price}',item['price']) // Thay tung san pham, vao card
+
+      document.getElementById('lstCard').innerHTML += card
+      
+    })
     for (let i=0; i<data.length ; i++ ){
       console.log(data[i]);
     }
@@ -134,16 +144,19 @@ let renderCoffee = async function() {
  }
 
 
-let renderSmoothie = async function() {
-  let response = await fetch("./views/card.html");
-  let result = await response.text()
-  shop_content.innerHTML = result;
-}
+// let renderSmoothie = async function() {
+//   let response = await fetch("./views/card.html");
+//   let result = await response.text() 
+//   shop_content.innerHTML = result;
+// }
 
-let renderFood = async function() {
-  let response = await fetch("./views/card.html");
-  let result = await response.text()
-  shop_content.innerHTML = result;
-}
+// let renderFood = async function() {
+//   let response = await fetch("./views/card.html");
+//   let result = await response.text()
+//   shop_content.innerHTML = result;
+// }
+
+
+
 
 export {getMenu, loadCard};

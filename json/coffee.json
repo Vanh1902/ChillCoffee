@@ -2,54 +2,220 @@
     "data": [
       {
         "id": 1,
-        "name": "Cà phê đen",
+        "name": "CÀ PHÊ ĐEN",
         "type": "Cà phê",
-        "mota": "Siêu đắng",
-        "price": 23000,
-        "img": "https://cdn.tgdd.vn/2021/02/CookProduct/Untitled-1-1200x676-4.jpg"
+        "mota": "Một tách cà phê đen thơm phảng phất mùi cacao là món quà tự thưởng tuyệt vời nhất cho những ai mê tinh chất nguyên bản nhất của cà phê.",
+        "price": 32000,
+        "img": "//product.hstatic.net/ 1000075078/product/cafe-den-da_18234c186f2f44f0a2d7ec1ce0e58158_master.jpg"
       },
       {
           "id": 2,
-        "name": "Cà phê Capuchino",
+        "name": "CÀ PHÊ CAPPUCCINO",
         "type": "Cà phê",
         "mota": "Cappuccino được gọi vui là thức uống một-phần-ba - 1/3 Espresso, 1/3 Sữa nóng, 1/3 Foam.",
-        "price": 23000,
-        "img": "https://cdn.tgdd.vn/2021/02/CookProduct/Untitled-1-1200x676-4.jpg"
+        "price": 50000,
+        "img": "https://product.hstatic.net/1000075078/product/capu-nong_a2a47a422fa94e8194e9d4c4badba9d3_master.jpg"
       },
       {
           "id": 3,
-        "name": "Cà phê đen",
+        "name": "CÀ PHÊ SỮA",
         "type": "Cà phê",
-        "price": 23000,
-        "img": "https://cdn.tgdd.vn/2021/02/CookProduct/Untitled-1-1200x676-4.jpg"
+        "mota":"Cà phê phin kết hợp cũng sữa đặc là một đồ uống được xem món uống thương hiệu của Việt Nam.",
+        "price": 32000,
+        "img": "https://product.hstatic.net/1000075078/product/cafe-sua-da_9073dfe2143d428a91a370e79df77e49_master.jpg"
       },
       {
           "id": 4,
-        "name": "Cà phê đen",
+        "name": "BẠC SỈU",
         "type": "Cà phê",
-        "price": 23000,
-        "img": "https://cdn.tgdd.vn/2021/02/CookProduct/Untitled-1-1200x676-4.jpg"
+        "mota":"Cà phê phin kết hợp cũng sữa đặc là một đồ uống được xem món uống thương hiệu của Việt Nam.",
+        "price": 33000,
+        "img": "https://product.hstatic.net/1000075078/product/bac-siu_13856adaa2354499aa61251b8b1e9fd6_master.jpg"
       },
       {
           "id": 5,
-        "name": "Cà phê đen",
+        "name": "LATTE",
         "type": "Cà phê",
-        "price": 23000,
-        "img": "https://cdn.tgdd.vn/2021/02/CookProduct/Untitled-1-1200x676-4.jpg"
+        "mota":"Khi chuẩn bị Latte, cà phê Espresso và sữa nóng được trộn lẫn vào nhau, bên trên được phủ một lớp foam mỏng và nhẹ.",
+        "price": 50000,
+        "img": "https://product.hstatic.net/1000075078/product/latte-nong_ffcd92de11f74937bce4197823246d07_master.jpg"
       },
       {
           "id": 6,
-        "name": "Cà phê đen",
+        "name": "ESPRESSO",
         "type": "Cà phê",
-        "price": 23000,
-        "img": "https://cdn.tgdd.vn/2021/02/CookProduct/Untitled-1-1200x676-4.jpg"
+        "mota":"Một cốc Espresso nguyên bản sẽ cho ra vị ngọt của caramel, vị chua dịu và sánh đặc.",
+        "price": 40000,
+        "img": "//product.hstatic.net/1000075078/product/espresso-nong_4b32833e9a5f48768ea5d5d2a4df0303_master.jpg"
       },
       {
           "id": 7,
-        "name": "Cà phê đen",
+        "name": "AMERICANO",
         "type": "Cà phê",
-        "price": 23000,
-        "img": "https://cdn.tgdd.vn/2021/02/CookProduct/Untitled-1-1200x676-4.jpg"
-      }
+        "mota":"Americano được pha chế bằng cách thêm nước vào một chút để pha loãng độ đặc của Espresso, từ đó mang lại hương vị nhẹ nhàng và thơm nồng nàn.",
+        "price": 40000,
+        "img": "//product.hstatic.net/1000075078/product/americano-da_7495646eaad24b8cbe0e68e8e479f01f_master.jpg"
+      },
+      {
+        "id": 8,
+      "name": "MOCHA",
+      "type": "Cà phê",
+      "mota":"Cà phê Mocha được ví von đơn giản là Sốt Sô cô la được pha cùng với một tách Espresso đặc biệt",
+      "price": 52000,
+      "img": "https://product.hstatic.net/1000075078/product/mocha-nong_66ebb6f03a874a4391fc80ad69264ea5_master.jpg"
+    },
+    {
+      "id": 9,
+    "name": "CARAMEL MACCHIATO",
+    "type": "Cà phê",
+    "mota":"Vị thơm béo của bọt sữa và sữa tươi, vị đắng thanh thoát của cà phê Espresso hảo hạng, và vị ngọt đậm của sốt caramel.",
+    "price": 50000,
+    "img": "//product.hstatic.net/1000075078/product/caramel-macchiato-nong_667b90cf1e20493899e6727ae8c1b071_master.jpg"
+  },
+
+
+  {
+    "id": 10,
+  "name": "Sinh tố VIỆT QUẤT",
+  "type": "other",
+  "mota":"Mứt Việt Quất chua thanh, ngòn ngọt, phối hợp nhịp nhàng với dòng sữa chua bổ dưỡng. Là món sinh tố thơm ngon mà cả đầu lưỡi và làn da đều thích.",
+  "price": 59000,
+  "img": "https://product.hstatic.net/1000075078/product/sinh-to-viet-quoc_75c00683e2aa4b8eb10e2b0d0e568a0c_master.jpg"
+  },
+  {
+    "id": 11,
+  "name": "COOKIES ĐÁ XAY",
+  "type": "other",
+  "mota":"Những mẩu bánh cookies giòn rụm kết hợp ăn ý với sữa tươi và kem tươi béo ngọt, đem đến cảm giác lạ miệng gây thích thú.",
+  "price": 59000,
+  "img": "https://product.hstatic.net/1000075078/product/cookie-da-xay_43c2bc99f313405aa253b803dcd59030_master.jpg"
+  },
+  {
+    "id": 12,
+  "name": "CÀ PHÊ ĐÁ XAY",
+  "type": "other",
+  "mota":"Cà phê đen được kết hợp với được kết hợp với sữa tươi và kem tươi béo ngọt, tạo nên cảm giác lạ miệng. ",
+  "price": 59000,
+  "img": "https://product.hstatic.net/1000075078/product/cookie-da-xay_43c2bc99f313405aa253b803dcd59030_master.jpg"
+  },
+  {
+    "id": 13,
+  "name": "SÔ CÔ LA",
+  "type": "other",
+  "mota":"Được làm ra từ Cacao nguyên chất hoà cùng sữa tươi béo ngậy. Tạo nên vị ngọt tự nhiên, không gắt cổ, để lại một chút đắng nhẹ,",
+  "price": 59000,
+  "img": "https://product.hstatic.net/1000075078/product/socola_c212fbafcdc94b50be1f217591122c81_master.jpg"
+  },
+  {
+    "id": 14,
+  "name": "MATCHA ĐÁ XAY",
+  "type": "other",
+  "mota":"Matcha thanh và đắng nhẹ được nhân đôi sảng khoái khi uống lạnh. Nhấn nhá thêm những nét bùi béo của kem và sữa.",
+  "price": 59000,
+  "img": "https://product.hstatic.net/1000075078/product/matcha-da-xay_7f214144321f43ff81f78f67f05a0b22_master.jpg"
+  },
+  {
+    "id": 15,
+  "name": "MATCHA LATTE",
+  "type": "other",
+  "mota":"Bột trà Matcha được pha trộn cùng sữa tươi và lớp foam mềm mịn, MATCHA LATTE là thức uống yêu thích của đa số mọi người ghé thăm ",
+  "price": 59000,
+  "img": "https://product.hstatic.net/1000075078/product/matcha_a30336fea9354497b988b9d185cfad7b_master.jpg"
+  },
+  {
+    "id": 16,
+  "name": "Yogurt Dưa lưới phát tài",
+  "type": "other",
+  "mota":"Hàng limited",
+  "price": 65000,
+  "img": "https://product.hstatic.net/1000075078/product/yogurt-dua-luoi_30e104322e764a8aa4794e09c1ff74ab_master.jpg"
+  },
+  {
+    "id": 17,
+  "name": "PHÚC BỒN TỬ CAM ĐÁ XAY",
+  "type": "other",
+  "mota":"Phúc Bồn Tử Cam Đá Xay khi uống tạo nên cảm giác trong lành và thư thái như đi biển ",
+  "price": 59000,
+  "img": "https://product.hstatic.net/1000075078/product/cam-pbt-da-xay_06ca55fce8e84389ab9d707f4bd753a7_master.jpg"
+  },
+  {
+    "id": 18,
+  "name": "ĐÀO VIỆT QUẤT ĐÁ XAY",
+  "type": "other",
+  "mota":"Tạo nên cảm giác mát mẻ và sảng khoái ",
+  "price": 59000,
+  "img": "https://product.hstatic.net/1000075078/product/dao-viet-quat-da-xay_7e464338009c432985f8e3cdba6acb38_master.jpg"
+  },
+
+
+  {
+    "id": 19,
+    "name": "BÁNH BAO HAI TRỨNG CÚT",
+    "type": "món ăn",
+    "price": 25000,
+    "img": "https://product.hstatic.net/1000075078/product/bbao-2-trung_883feca9c9974d11ad062a83e246808f_master.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Bánh mì que",
+    "type": "món ăn",
+    "price": 12000,
+    "img": "https://product.hstatic.net/1000075078/product/banh-mi-que_097b65c8e7c749398f1bdae4ae23d2ed_master.jpg"
+  },
+  {
+    "id": 21,
+    "name": "BÔNG LAN TRỨNG MUỐI",
+    "type": "món ăn",
+    "price": 29000 ,
+    "img": "https://product.hstatic.net/1000075078/product/bong-lan-trung-muoi_538c729b19ce49b5aabaaca242171a51_master.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Mousse Passion Cheese",
+    "type": "món ăn",
+    "price": 29000 ,
+    "img": "https://product.hstatic.net/1000075078/product/chanh-day_00a2d1c0dddf4f53916f1f8a58d446c4_master.jpg"
+  },
+  {
+    "id": 23,
+    "name": "MOUSSE RED VELVET",
+    "type": "món ăn",
+    "price": 29000 ,
+    "img": "https://product.hstatic.net/1000075078/product/red-velvet_bcc01eaaa9b14d9cb81aca612af917c8_master.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Mousse Tiramisu",
+    "type": "món ăn",
+    "price": 32000 ,
+    "img": "https://product.hstatic.net/1000075078/product/tiramisu_9d4baf1c996640a8b4516a2a5be4d43e_master.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Mochi Kem Chocolate",
+    "type": "món ăn",
+    "price": 19000 ,
+    "img": "https://product.hstatic.net/1000075078/product/mochi-choco_8165ee40058f4023a15783e3b7c014b6_master.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Mochi Kem Phúc Bồn Tử",
+    "type": "món ăn",
+    "price": 19000 ,
+    "img": "https://product.hstatic.net/1000075078/product/mochi_phuc_bon_tu-min_da7d85f8fb35493db0d58d96f06bd1ca_master.jpg"
+  },  
+  {
+    "id": 27,
+    "name": "Mochi Kim Việt Quất",
+    "type": "món ăn",
+    "price": 19000,
+    "img": "https://product.hstatic.net/1000075078/product/mochi_viet_quat_10d54f1edf254e4aa391ba0a93338f84_master.jpg"
+  }
+
     ]
   }
+
+
+
+
+
