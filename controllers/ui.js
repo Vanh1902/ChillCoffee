@@ -6,42 +6,42 @@ var shop_content = document.createElement('div');
 window.onload = function() {
   shop_menu.id = 'shop_menu';
   document.body.appendChild(shop_menu);
-
   shop_content.id = 'shop_content';
   document.body.appendChild(shop_content);
-
   getMenu()
   loadHome()
+  renderCoffee()  
 }
 
 let getMenu = async function() {
   let response = await fetch("./views/menu.html");
   let result = await response.text()
   shop_menu.innerHTML = result;
-  //
+
   document.getElementById('btnHome').addEventListener('click', ()=>{
       // this.prev_image();   
       console.log('pressed Home');
       loadHome()
+      renderCoffee()
   });
-  document.getElementById('btnMore').addEventListener('click', ()=>{
+  
+  document.getElementById('btnCategory').addEventListener('click', ()=>{
     // this.prev_image();   
-    console.log('pressed More');
-    loadMore()
+    console.log('pressed Category');
+    loadCategory()
+});
+  
+document.getElementById('btnAboutus').addEventListener('click', ()=>{
+  // this.prev_image();   
+  console.log('pressed About us');
+  loadAboutus()
 });
 
-  document.getElementById('btnCategory').addEventListener('click', ()=>{
-      // this.prev_image();   
-      console.log('pressed Category');
-      loadCategory()
-  });
-
-  document.getElementById('btnAbout').addEventListener('click', ()=>{
-      // this.prev_image();   
-      console.log('pressed Support');
-      loadSupport()
-  });
-
+  document.getElementById('btnSupport').addEventListener('click', ()=>{
+    // this.prev_image();   
+    console.log('pressed Support');
+    loadSupport() 
+});
 
   document.getElementById('btnLogIn').addEventListener('click', async ()=>{
       // this.prev_image();   
@@ -52,7 +52,7 @@ let getMenu = async function() {
 
   document.getElementById('btnSignUp').addEventListener('click', async ()=>{
       // this.prev_image();   
-      console.log('pressed');
+      console.log('pressed Sign Up');
       await loadSignUp()
       signUp()
   });
@@ -61,19 +61,7 @@ let getMenu = async function() {
 let loadHome = async function() {
   let response = await fetch("./views/home.html");
   let result = await response.text()
-  shop_content.innerHTML = result;
-  document.getElementById("tabs-1").addEventListener('click', ()=>{
-    console.log('Coffee');
-    renderCoffee();
-  })
-  // document.getElementById('tabs-2').addEventListener('click',()=>{
-  //   console.log('Smoothie');
-  //   renderSmoothie();
-  // })
-//   document.getElementById('tabs-3').addEventListener('click',()=>{
-//     console.log('Food');
-//     renderFood();
-//   })
+  shop_content.innerHTML = result
 }
 
 let loadCategory = async function() {
@@ -83,12 +71,17 @@ let loadCategory = async function() {
   document.getElementById('btn-Delivery').addEventListener('click', ()=>{
     console.log('pressed Profile');
     renderProfile();
-});
+  });
 }
- 
+
+let loadAboutus = async function() {
+  let response = await fetch("./views/Aboutus.html");
+  let result = await response.text()
+  shop_content.innerHTML = result;
+}
 
 let loadSupport = async function() {
-  let response = await fetch("./views/support.html");
+  let response = await fetch("./views/Support.html");
   let result = await response.text()
   shop_content.innerHTML = result;
 }
@@ -97,21 +90,21 @@ let loadLogIn = async function() {
   let response = await fetch("./views/login.html");
   let result = await response.text()
   shop_content.innerHTML = result;
+  document.getElementById('logInBtn').addEventListener('click', ()=>{
+  signIn();
+});
 }
 
 let loadSignUp = async function() {
   let response = await fetch("./views/signup.html");
   let result = await response.text()
   shop_content.innerHTML = result;
+  document.getElementById('signUpBtn').addEventListener('click', ()=>{
+    signUp();
+});
 }
-
 let loadCard = async function() {
   let response = await fetch("./views/card.html");
-  return response.text()
-}
-
-let loadMore = async function() {
-  let response = await fetch("./views/more.html");
   return response.text()
 }
 
@@ -119,42 +112,28 @@ let renderProfile = async function() {
   let response = await fetch("./views/profile.html");
   let result = await response.text()
   shop_content.innerHTML = result;
-  
 }
 
 let renderCoffee = async function() {
   let responseCard = await fetch("./views/card.html"); //Mot card
   let resultCard = await responseCard.text()
- 
   let responseAPI = await fetch("http://authen.gomatching.org/api/v1/test"); // Danh sach san pham
   let resultAPI = await responseAPI.json()
- 
   let data = resultAPI['data']
-
-    data.map(function(item){
-      let card = resultCard.replace('{#name}', item['name'] ).replace('{#infor}', item['mota']).replace('{#image}',item['img']).replace('{#price}',item['price']) // Thay tung san pham, vao card
-
-      document.getElementById('lstCard').innerHTML += card
-      
+      data.map(function(item){ 
+      let card = resultCard.replace('{#name}', item['name']).replace('{#infor}', item['mota']).replace('{#image}',item['img']).replace('{#price}',item['price']) // Thay tung san pham, vao card
+      let Danhmuc = item['type']
+      if(Danhmuc.localeCompare("Cà phê") ==  0){
+        document.getElementById('lstCard').innerHTML += card
+      }
+      if(Danhmuc.localeCompare("món ăn") == 0){
+        document.getElementById('3stCard').innerHTML += card
+      }
+      if(Danhmuc.localeCompare("other") == 0){
+        document.getElementById('2stCard').innerHTML += card
+      }
     })
-    for (let i=0; i<data.length ; i++ ){
-      console.log(data[i]);
-    }
-  
  }
-
-
-// let renderSmoothie = async function() {
-//   let response = await fetch("./views/card.html");
-//   let result = await response.text() 
-//   shop_content.innerHTML = result;
-// }
-
-// let renderFood = async function() {
-//   let response = await fetch("./views/card.html");
-//   let result = await response.text()
-//   shop_content.innerHTML = result;
-// }
 
 
 
