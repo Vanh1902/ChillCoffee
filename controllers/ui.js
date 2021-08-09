@@ -2,15 +2,19 @@ import { signUp,signIn } from "./authen.js";
 // Bước 1: Khởi tạo các thành phần
 var shop_menu = document.createElement('div');
 var shop_content = document.createElement('div');
+var shop_footer = document.createElement('footer');
 
 window.onload = function() {
   shop_menu.id = 'shop_menu';
   document.body.appendChild(shop_menu);
   shop_content.id = 'shop_content';
   document.body.appendChild(shop_content);
+  shop_footer.id = 'shop_footer'
+  document.body.appendChild(shop_footer);
   getMenu()
   loadHome()
   renderCoffee()  
+  loadFooter()
 }
 
 let getMenu = async function() {
@@ -43,6 +47,7 @@ document.getElementById('btnAboutus').addEventListener('click', ()=>{
     loadSupport() 
 });
 
+
   document.getElementById('btnLogIn').addEventListener('click', async ()=>{
       // this.prev_image();   
       console.log('pressed Log In');
@@ -62,6 +67,12 @@ let loadHome = async function() {
   let response = await fetch("./views/home.html");
   let result = await response.text()
   shop_content.innerHTML = result
+}
+
+let loadFooter = async function() {
+  let response = await fetch("./views/footer.html");
+  let result = await response.text()
+  shop_footer.innerHTML = result
 }
 
 let loadCategory = async function() {

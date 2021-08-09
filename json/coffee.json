@@ -2,7 +2,7 @@
     "data": [
       {
         "id": 1,
-        "name": "CÀ PHÊ ĐEN",
+        "name": "BLACK COFFEE",
         "type": "Cà phê",
         "mota": "Một tách cà phê đen thơm phảng phất mùi cacao là món quà tự thưởng tuyệt vời nhất cho những ai mê tinh chất nguyên bản nhất của cà phê.",
         "price": 32000,
@@ -10,7 +10,7 @@
       },
       {
           "id": 2,
-        "name": "CÀ PHÊ CAPPUCCINO",
+        "name": " AMERICAN CAPPUCCINO",
         "type": "Cà phê",
         "mota": "Cappuccino được gọi vui là thức uống một-phần-ba - 1/3 Espresso, 1/3 Sữa nóng, 1/3 Foam.",
         "price": 50000,
@@ -18,7 +18,7 @@
       },
       {
           "id": 3,
-        "name": "CÀ PHÊ SỮA",
+        "name": "MILK COFFEE",
         "type": "Cà phê",
         "mota":"Cà phê phin kết hợp cũng sữa đặc là một đồ uống được xem món uống thương hiệu của Việt Nam.",
         "price": 32000,
@@ -76,7 +76,7 @@
 
   {
     "id": 10,
-  "name": "Sinh tố VIỆT QUẤT",
+  "name": "BLUEBERRY SMOOTHIE",
   "type": "other",
   "mota":"Mứt Việt Quất chua thanh, ngòn ngọt, phối hợp nhịp nhàng với dòng sữa chua bổ dưỡng. Là món sinh tố thơm ngon mà cả đầu lưỡi và làn da đều thích.",
   "price": 59000,
@@ -84,7 +84,7 @@
   },
   {
     "id": 11,
-  "name": "COOKIES ĐÁ XAY",
+  "name": "Iced Cookies",
   "type": "other",
   "mota":"Những mẩu bánh cookies giòn rụm kết hợp ăn ý với sữa tươi và kem tươi béo ngọt, đem đến cảm giác lạ miệng gây thích thú.",
   "price": 59000,
@@ -92,7 +92,7 @@
   },
   {
     "id": 12,
-  "name": "CÀ PHÊ ĐÁ XAY",
+  "name": "ICED COFFEE GRINDER",
   "type": "other",
   "mota":"Cà phê đen được kết hợp với được kết hợp với sữa tươi và kem tươi béo ngọt, tạo nên cảm giác lạ miệng. ",
   "price": 59000,
@@ -100,7 +100,7 @@
   },
   {
     "id": 13,
-  "name": "SÔ CÔ LA",
+  "name": "CHOCOLATE",
   "type": "other",
   "mota":"Được làm ra từ Cacao nguyên chất hoà cùng sữa tươi béo ngậy. Tạo nên vị ngọt tự nhiên, không gắt cổ, để lại một chút đắng nhẹ,",
   "price": 59000,
@@ -108,7 +108,7 @@
   },
   {
     "id": 14,
-  "name": "MATCHA ĐÁ XAY",
+  "name": "Iced MATCHA",
   "type": "other",
   "mota":"Matcha thanh và đắng nhẹ được nhân đôi sảng khoái khi uống lạnh. Nhấn nhá thêm những nét bùi béo của kem và sữa.",
   "price": 59000,
@@ -140,7 +140,7 @@
   },
   {
     "id": 18,
-  "name": "ĐÀO VIỆT QUẤT ĐÁ XAY",
+  "name": "Peach BLUEBERRY Iced",
   "type": "other",
   "mota":"Tạo nên cảm giác mát mẻ và sảng khoái ",
   "price": 59000,
