@@ -61,6 +61,8 @@ document.getElementById('btnAboutus').addEventListener('click', ()=>{
       await loadSignUp()
       signUp()
   });
+
+  
 }
 
 let loadHome = async function() {
@@ -132,7 +134,7 @@ let renderCoffee = async function() {
   let resultAPI = await responseAPI.json()
   let data = resultAPI['data']
       data.map(function(item){ 
-      let card = resultCard.replace('{#name}', item['name']).replace('{#infor}', item['mota']).replace('{#image}',item['img']).replace('{#price}',item['price']) // Thay tung san pham, vao card
+      let card = resultCard.replace('{#name}', item['name']).replace('{#infor}', item['mota']).replace('{#image}',item['img']).replace('{#price}',item['price']).replace('{#btnId}',item['id']) // Thay tung san pham, vao card
       let Danhmuc = item['type']
       if(Danhmuc.localeCompare("Cà phê") ==  0){
         document.getElementById('lstCard').innerHTML += card
@@ -143,10 +145,16 @@ let renderCoffee = async function() {
       if(Danhmuc.localeCompare("other") == 0){
         document.getElementById('2stCard').innerHTML += card
       }
+    
+    
     })
- }
+}
+  let Buy = async function(id){
+    alert(id)
+  }
+
+  
 
 
 
-
-export {getMenu, loadCard};
+export {getMenu, loadCard, Buy};
