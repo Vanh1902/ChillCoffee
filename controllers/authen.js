@@ -47,4 +47,16 @@ let signIn = function(){
         alert(error.message)
     })
 }
-export{signUp, signIn}
+let resetPassword = function () {
+    let email = document.getElementById('exampleInputEmail1').value
+
+    firebase.auth().sendPasswordResetEmail(email)
+        .then((success) => {
+            alert("Success")
+        })
+        .catch((error) => {
+            alert(error.message)
+        })
+
+}
+export{signUp, signIn, resetPassword}

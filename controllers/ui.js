@@ -1,4 +1,4 @@
-import { signUp,signIn } from "./authen.js";
+import { signUp,signIn, resetPassword} from "./authen.js";
 // Bước 1: Khởi tạo các thành phần
 var shop_menu = document.createElement('div');
 var shop_content = document.createElement('div');
@@ -55,6 +55,8 @@ document.getElementById('btnAboutus').addEventListener('click', ()=>{
       signIn()
   });
 
+
+
   document.getElementById('btnSignUp').addEventListener('click', async ()=>{
       // this.prev_image();   
       console.log('pressed Sign Up');
@@ -106,6 +108,11 @@ let loadLogIn = async function() {
   document.getElementById('logInBtn').addEventListener('click', ()=>{
   signIn();
 });
+  document.getElementById('btnForgotPassword').addEventListener('click', async ()=>{
+    // this.prev_image();   
+    console.log('pressed Forgot Password');
+    await resetPassword()
+  });
 }
 
 let loadSignUp = async function() {
