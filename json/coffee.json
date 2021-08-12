@@ -4,7 +4,7 @@
         "id": 1,
         "name": "BLACK COFFEE",
         "type": "Cà phê",
-        "mota": "Một tách cà phê đen thơm phảng phất mùi cacao là món quà tự thưởng tuyệt vời nhất cho những ai mê tinh chất nguyên bản nhất của cà phê.",
+        "mota": "A cup of fragrant black coffee smelling of cocoa is the best self-rewarding gift for those who love the most original essence of coffee.",
         "price": 32000,
         "img": "//product.hstatic.net/ 1000075078/product/cafe-den-da_18234c186f2f44f0a2d7ec1ce0e58158_master.jpg"
       },
@@ -12,7 +12,7 @@
         "id": 2,
         "name": " AMERICAN CAPPUCCINO",
         "type": "Cà phê",
-        "mota": "Cappuccino được gọi vui là thức uống một-phần-ba - 1/3 Espresso, 1/3 Sữa nóng, 1/3 Foam.",
+        "mota": "Cappuccino is fun called a one-third - 1/3 Espresso drink, 1/3 Hot milk, 1/3 Foam.",
         "price": 50000,
         "img": "https://product.hstatic.net/1000075078/product/capu-nong_a2a47a422fa94e8194e9d4c4badba9d3_master.jpg"
       },
@@ -20,7 +20,7 @@
         "id": 3,
         "name": "MILK COFFEE",
         "type": "Cà phê",
-        "mota":"Cà phê phin kết hợp cũng sữa đặc là một đồ uống được xem món uống thương hiệu của Việt Nam.",
+        "mota":"Coffee phin combined is also condensed milk is a drink that is considered a brand drink of Vietnam.",
         "price": 32000,
         "img": "https://product.hstatic.net/1000075078/product/cafe-sua-da_9073dfe2143d428a91a370e79df77e49_master.jpg"
       },
@@ -28,7 +28,7 @@
           "id": 4,
         "name": "BẠC SỈU",
         "type": "Cà phê",
-        "mota":"Cà phê phin kết hợp cũng sữa đặc là một đồ uống được xem món uống thương hiệu của Việt Nam.",
+        "mota":"Silver is a glass of white milk with a little coffee.",
         "price": 33000,
         "img": "https://product.hstatic.net/1000075078/product/bac-siu_13856adaa2354499aa61251b8b1e9fd6_master.jpg"
       },
@@ -36,7 +36,7 @@
           "id": 5,
         "name": "LATTE",
         "type": "Cà phê",
-        "mota":"Khi chuẩn bị Latte, cà phê Espresso và sữa nóng được trộn lẫn vào nhau, bên trên được phủ một lớp foam mỏng và nhẹ.",
+        "mota":"When preparing Latte, Espresso coffee and hot milk are mixed together, the top of which is covered with a thin and light layer of foam.",
         "price": 50000,
         "img": "https://product.hstatic.net/1000075078/product/latte-nong_ffcd92de11f74937bce4197823246d07_master.jpg"
       },
@@ -44,7 +44,7 @@
           "id": 6,
         "name": "ESPRESSO",
         "type": "Cà phê",
-        "mota":"Một cốc Espresso nguyên bản sẽ cho ra vị ngọt của caramel, vị chua dịu và sánh đặc.",
+        "mota":"An original cup of Espresso will give out the sweetness of the caramel, the sour taste is soothing and thick.",
         "price": 40000,
         "img": "//product.hstatic.net/1000075078/product/espresso-nong_4b32833e9a5f48768ea5d5d2a4df0303_master.jpg"
       },
@@ -52,7 +52,7 @@
           "id": 7,
         "name": "AMERICANO",
         "type": "Cà phê",
-        "mota":"Americano được pha chế bằng cách thêm nước vào một chút để pha loãng độ đặc của Espresso, từ đó mang lại hương vị nhẹ nhàng và thơm nồng nàn.",
+        "mota":"Americano is prepared by adding water a little to dilute the Espresso's denseness, thereby giving it a gentle and aromatic flavor.",
         "price": 40000,
         "img": "//product.hstatic.net/1000075078/product/americano-da_7495646eaad24b8cbe0e68e8e479f01f_master.jpg"
       },
@@ -60,7 +60,7 @@
         "id": 8,
       "name": "MOCHA",
       "type": "Cà phê",
-      "mota":"Cà phê Mocha được ví von đơn giản là Sốt Sô cô la được pha cùng với một tách Espresso đặc biệt",
+      "mota":"Mocha coffee is simply like chocolate sauce mixed with a special cup of Espresso",
       "price": 52000,
       "img": "https://product.hstatic.net/1000075078/product/mocha-nong_66ebb6f03a874a4391fc80ad69264ea5_master.jpg"
     },
@@ -68,7 +68,7 @@
       "id": 9,
     "name": "CARAMEL MACCHIATO",
     "type": "Cà phê",
-    "mota":"Vị thơm béo của bọt sữa và sữa tươi, vị đắng thanh thoát của cà phê Espresso hảo hạng, và vị ngọt đậm của sốt caramel.",
+    "mota":"The fatty aroma of milk foam and fresh milk, the serene bitterness of fine Espresso coffee, and the rich sweetness of caramel sauce.",
     "price": 50000,
     "img": "//product.hstatic.net/1000075078/product/caramel-macchiato-nong_667b90cf1e20493899e6727ae8c1b071_master.jpg"
   },
@@ -78,7 +78,7 @@
     "id": 10,
   "name": "BLUEBERRY SMOOTHIE",
   "type": "other",
-  "mota":"Mứt Việt Quất chua thanh, ngòn ngọt, phối hợp nhịp nhàng với dòng sữa chua bổ dưỡng. Là món sinh tố thơm ngon mà cả đầu lưỡi và làn da đều thích.",
+  "mota":"Blueberry jam with sour bar, sweet coriander, rhythmically combined with nutritious yogurt line. It's a delicious smoothie that both the tip of the tongue and the skin like.",
   "price": 59000,
   "img": "https://product.hstatic.net/1000075078/product/sinh-to-viet-quoc_75c00683e2aa4b8eb10e2b0d0e568a0c_master.jpg"
   },
@@ -86,7 +86,7 @@
     "id": 11,
   "name": "Iced Cookies",
   "type": "other",
-  "mota":"Những mẩu bánh cookies giòn rụm kết hợp ăn ý với sữa tươi và kem tươi béo ngọt, đem đến cảm giác lạ miệng gây thích thú.",
+  "mota":"Crunchy cookies combine well with fresh milk and sweet whipped cream, bringing a strange feeling of excitement.",
   "price": 59000,
   "img": "https://product.hstatic.net/1000075078/product/cookie-da-xay_43c2bc99f313405aa253b803dcd59030_master.jpg"
   },
@@ -94,7 +94,7 @@
     "id": 12,
   "name": "ICED COFFEE GRINDER",
   "type": "other",
-  "mota":"Cà phê đen được kết hợp với được kết hợp với sữa tươi và kem tươi béo ngọt, tạo nên cảm giác lạ miệng. ",
+  "mota":"Black coffee is combined with fresh milk and sweet cream, creating a strange feeling.",
   "price": 59000,
   "img": "https://product.hstatic.net/1000075078/product/cookie-da-xay_43c2bc99f313405aa253b803dcd59030_master.jpg"
   },
@@ -102,7 +102,7 @@
     "id": 13,
   "name": "CHOCOLATE",
   "type": "other",
-  "mota":"Được làm ra từ Cacao nguyên chất hoà cùng sữa tươi béo ngậy. Tạo nên vị ngọt tự nhiên, không gắt cổ, để lại một chút đắng nhẹ,",
+  "mota":"Made from pure cocoa blended with fatty fresh milk. Creates a natural sweetness, not harsh neck, leaving a slight bitterness.",
   "price": 59000,
   "img": "https://product.hstatic.net/1000075078/product/socola_c212fbafcdc94b50be1f217591122c81_master.jpg"
   },
@@ -110,7 +110,7 @@
     "id": 14,
   "name": "Iced MATCHA",
   "type": "other",
-  "mota":"Matcha thanh và đắng nhẹ được nhân đôi sảng khoái khi uống lạnh. Nhấn nhá thêm những nét bùi béo của kem và sữa.",
+  "mota":"Matcha bar and light bitterness are double refreshing when drinking cold. Emphasise the fatty features of cream and milk.",
   "price": 59000,
   "img": "https://product.hstatic.net/1000075078/product/matcha-da-xay_7f214144321f43ff81f78f67f05a0b22_master.jpg"
   },
@@ -118,7 +118,7 @@
     "id": 15,
   "name": "MATCHA LATTE",
   "type": "other",
-  "mota":"Bột trà Matcha được pha trộn cùng sữa tươi và lớp foam mềm mịn, MATCHA LATTE là thức uống yêu thích của đa số mọi người ghé thăm ",
+  "mota":"Matcha tea powder is mixed with fresh milk and soft foam, MATCHA LATTE is the favorite drink of most people visiting.",
   "price": 59000,
   "img": "https://product.hstatic.net/1000075078/product/matcha_a30336fea9354497b988b9d185cfad7b_master.jpg"
   },
@@ -126,7 +126,7 @@
     "id": 16,
   "name": "Yogurt Dưa lưới phát tài",
   "type": "other",
-  "mota":"Hàng limited",
+  "mota":"Limited edition",
   "price": 65000,
   "img": "https://product.hstatic.net/1000075078/product/yogurt-dua-luoi_30e104322e764a8aa4794e09c1ff74ab_master.jpg"
   },
@@ -134,7 +134,7 @@
     "id": 17,
   "name": "PHÚC BỒN TỬ CAM ĐÁ XAY",
   "type": "other",
-  "mota":"Phúc Bồn Tử Cam Đá Xay khi uống tạo nên cảm giác trong lành và thư thái như đi biển ",
+  "mota":"Phúc Bồn Tử Cam Đá Xay khi uống tạo nên cảm giác trong lành và thư thái như đi biển. ",
   "price": 59000,
   "img": "https://product.hstatic.net/1000075078/product/cam-pbt-da-xay_06ca55fce8e84389ab9d707f4bd753a7_master.jpg"
   },

@@ -3,7 +3,7 @@ import { signUp,signIn, resetPassword} from "./authen.js";
 var shop_menu = document.createElement('div');
 var shop_content = document.createElement('div');
 var shop_footer = document.createElement('footer');
-
+//shop_footer.style.cssText="position: fixed;left: 0;bottom: 0;width: 100%;";
 window.onload = function() {
   shop_menu.id = 'shop_menu';
   document.body.appendChild(shop_menu);
@@ -14,7 +14,7 @@ window.onload = function() {
   getMenu()
   loadHome()
   renderCoffee()  
-  loadFooter()
+  //loadFooter()
 }
 
 let getMenu = async function() {
@@ -33,6 +33,7 @@ let getMenu = async function() {
     // this.prev_image();   
     console.log('pressed Category');
     loadCategory()
+    loadCart()
 });
   
 document.getElementById('btnAboutus').addEventListener('click', ()=>{
@@ -140,7 +141,7 @@ let renderCoffee = async function() {
   let responseAPI = await fetch("http://authen.gomatching.org/api/v1/test"); // Danh sach san pham
   let resultAPI = await responseAPI.json()
   let data = resultAPI['data']
-      data.map(function(item){ 
+  data.map(function(item){ 
       let card = resultCard.replace('{#name}', item['name']).replace('{#infor}', item['mota']).replace('{#image}',item['img']).replace('{#price}',item['price']).replace('{#btnId}',item['id']) // Thay tung san pham, vao card
       let Danhmuc = item['type']
       if(Danhmuc.localeCompare("Cà phê") ==  0){
@@ -152,16 +153,32 @@ let renderCoffee = async function() {
       if(Danhmuc.localeCompare("other") == 0){
         document.getElementById('2stCard').innerHTML += card
       }
-    
-    
+  })
+  data.map(function(item){ 
+    document.getElementById("btnBuy"+item['id']).addEventListener('click', function() {
+      alert('Sản phẩm đã thêm vào giỏ hàng '+item['name']+' : '+item['price']+'vnđ')
+      localStorage.setItem(item['id'],JSON.stringify(item));
+
     })
+  })
 }
-  let Buy = async function(id){
-    alert(id)
+
+let loadCart = async function() {
+  let responseCard = await fetch("./views/item.html"); //Mot card
+  let resultCard = await responseCard.text()
+  for(var i =0; i < localStorage.length; i++){
+    let text =  localStorage.key(i);
+    var retrievedObject = localStorage.getItem(text);
+    console.log('retrievedObject: ', JSON.parse(retrievedObject));
+
+    let item =JSON.parse(retrievedObject); 
+    let cart = resultCard.replace('{#name}',item['name']).replace('{#price}',item['price']).replace('{#number}',i+1)
+    document.getElementById('product').innerHTML += cart
   }
 
-  
+
+}
 
 
 
-export {getMenu, loadCard, Buy};
+export {getMenu, loadCard};
