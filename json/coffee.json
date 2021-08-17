@@ -6,7 +6,7 @@
         "type": "Cà phê",
         "mota": "A cup of fragrant black coffee smelling of cocoa is the best self-rewarding gift for those who love the most original essence of coffee.",
         "price": 32000,
-        "img": "//product.hstatic.net/ 1000075078/product/cafe-den-da_18234c186f2f44f0a2d7ec1ce0e58158_master.jpg"
+        "img": "//product.hstatic.net/1000075078/product/cafe-den-da_18234c186f2f44f0a2d7ec1ce0e58158_master.jpg"
       },
       {
         "id": 2,
@@ -134,7 +134,7 @@
     "id": 17,
   "name": "PHÚC BỒN TỬ CAM ĐÁ XAY",
   "type": "other",
-  "mota":"Phúc Bồn Tử Cam Đá Xay khi uống tạo nên cảm giác trong lành và thư thái như đi biển. ",
+  "mota":"Phúc Bồn Tử Cam Đá Xay When drinking, it feels as fresh and relaxing as going to the beach. ",
   "price": 59000,
   "img": "https://product.hstatic.net/1000075078/product/cam-pbt-da-xay_06ca55fce8e84389ab9d707f4bd753a7_master.jpg"
   },
@@ -142,7 +142,7 @@
     "id": 18,
   "name": "Peach BLUEBERRY Iced",
   "type": "other",
-  "mota":"Tạo nên cảm giác mát mẻ và sảng khoái ",
+  "mota":"Create a cool and refreshing feeling ",
   "price": 59000,
   "img": "https://product.hstatic.net/1000075078/product/dao-viet-quat-da-xay_7e464338009c432985f8e3cdba6acb38_master.jpg"
   },
@@ -150,22 +150,25 @@
 
   {
     "id": 19,
-    "name": "BÁNH BAO HAI TRỨNG CÚT",
+    "name": "QUAIL EGG DUMPLINGS",
     "type": "món ăn",
+    "mota": "It has two quail eggs.", 
     "price": 25000,
     "img": "https://product.hstatic.net/1000075078/product/bbao-2-trung_883feca9c9974d11ad062a83e246808f_master.jpg"
   },
   {
     "id": 20,
-    "name": "Bánh mì que",
+    "name": "Bread sticks",
     "type": "món ăn",
+    "mota": "In side have lot of meat",
     "price": 12000,
     "img": "https://product.hstatic.net/1000075078/product/banh-mi-que_097b65c8e7c749398f1bdae4ae23d2ed_master.jpg"
   },
   {
     "id": 21,
-    "name": "BÔNG LAN TRỨNG MUỐI",
+    "name": "BSALTED EGG ORCHID",
     "type": "món ăn",
+    "mota": "On the cake there is a salted egg.",
     "price": 29000 ,
     "img": "https://product.hstatic.net/1000075078/product/bong-lan-trung-muoi_538c729b19ce49b5aabaaca242171a51_master.jpg"
   },
@@ -173,6 +176,7 @@
     "id": 22,
     "name": "Mousse Passion Cheese",
     "type": "món ăn",
+    
     "price": 29000 ,
     "img": "https://product.hstatic.net/1000075078/product/chanh-day_00a2d1c0dddf4f53916f1f8a58d446c4_master.jpg"
   },

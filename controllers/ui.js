@@ -14,11 +14,11 @@ window.onload = function() {
   getMenu()
   loadHome()
   renderCoffee()  
-  //loadFooter()
+  loadFooter()
 }
 
 let getMenu = async function() {
-  let response = await fetch("./views/menu.html");
+  let response = await fetch("./views/nav-bar.html");
   let result = await response.text()
   shop_menu.innerHTML = result;
 
@@ -138,7 +138,7 @@ let renderProfile = async function() {
 let renderCoffee = async function() {
   let responseCard = await fetch("./views/card.html"); //Mot card
   let resultCard = await responseCard.text()
-  let responseAPI = await fetch("http://authen.gomatching.org/api/v1/test"); // Danh sach san pham
+  let responseAPI = await fetch("https://authen.gomatching.org/api/v1/test"); // Danh sach san pham
   let resultAPI = await responseAPI.json()
   let data = resultAPI['data']
   data.map(function(item){ 
