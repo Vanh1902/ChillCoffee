@@ -1,13 +1,11 @@
 <tr>
     <th scope="row">{#number}</th>
     <td>{#name}</td>
-    <td><input type="number" id="quantity" name="quantity" min="1" max="10" ></td>
-    <td>{#price}</td>
     <td>
-          <input type="radio"  name="fav_language" value="HTML">
-          <label for="html">Ice</label><br>
-          <input type="radio" id="" name="fav_language" value="CSS">
-          <label for="css">No ice</label><br>
+        <img src="{#image}" height="70px" width="70px">
     </td>
-    <td><button type="button" class="btn btn-danger">Delete</button></td>
+    <td ><input type="number" id="btnAmount{#btnAmount}" name="quantity" min="1" max="150" value="1"></td>
+    <td>{#price}</td>
+    <td><a id="totalprice{#idPrice}"></a></td>
+    <td><button type="button" class="btn btn-danger" id="btn-delete">Delete</button></td>
 </tr>

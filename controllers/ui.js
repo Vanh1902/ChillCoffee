@@ -32,7 +32,7 @@ let getMenu = async function() {
   document.getElementById('btnCategory').addEventListener('click', ()=>{
     // this.prev_image();   
     console.log('pressed Category');
-    loadCategory()
+    loadBill()
     loadCart()
 });
   
@@ -80,8 +80,8 @@ let loadFooter = async function() {
   shop_footer.innerHTML = result
 }
 
-let loadCategory = async function() {
-  let response = await fetch("./views/category.html");
+let loadBill = async function() {
+  let response = await fetch("./views/cart.html");
   let result = await response.text()
   shop_content.innerHTML = result;
   document.getElementById('btn-Delivery').addEventListener('click', ()=>{
@@ -138,21 +138,24 @@ let renderProfile = async function() {
 let renderCoffee = async function() {
   let responseCard = await fetch("./views/card.html"); //Mot card
   let resultCard = await responseCard.text()
-  let responseAPI = await fetch("https://authen.gomatching.org/api/v1/test"); // Danh sach san pham
+  let responseAPI = await fetch("https://vanh1902.github.io/json/coffee.json"); // Danh sach san pham
   let resultAPI = await responseAPI.json()
   let data = resultAPI['data']
   data.map(function(item){ 
-      let card = resultCard.replace('{#name}', item['name']).replace('{#infor}', item['mota']).replace('{#image}',item['img']).replace('{#price}',item['price']).replace('{#btnId}',item['id']) // Thay tung san pham, vao card
+      let card = resultCard.replace('{#name}', item['name']).replace('{#infor}', item['mota']).replace('{#image}',item['img']).replace('{#price}',item['price']+' VNĐ').replace('{#btnId}',item['id']) // Thay tung san pham, vao card
       let Danhmuc = item['type']
+      let nothing = undefined;
       if(Danhmuc.localeCompare("Cà phê") ==  0){
         document.getElementById('lstCard').innerHTML += card
       }
       if(Danhmuc.localeCompare("món ăn") == 0){
         document.getElementById('3stCard').innerHTML += card
+        delete "undefined"
       }
       if(Danhmuc.localeCompare("other") == 0){
         document.getElementById('2stCard').innerHTML += card
       }
+      
   })
   data.map(function(item){ 
     document.getElementById("btnBuy"+item['id']).addEventListener('click', function() {
@@ -168,16 +171,46 @@ let loadCart = async function() {
   let resultCard = await responseCard.text()
   for(var i =0; i < localStorage.length; i++){
     let text =  localStorage.key(i);
-    var retrievedObject = localStorage.getItem(text);
+    let retrievedObject = localStorage.getItem(text);
     console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
     let item =JSON.parse(retrievedObject); 
-    let cart = resultCard.replace('{#name}',item['name']).replace('{#price}',item['price']).replace('{#number}',i+1)
+    let cart = resultCard.replace('{#name}',item['name']).replace('{#price}',item['price'])
+    .replace('{#number}',i+1).replace('{#image}', item['img']).replace('{#btnAmount}',item['id'])
+    .replace('{#idPrice}' , item['id'])
     document.getElementById('product').innerHTML += cart
+    
   }
+  
 
+  for(var i =0; i < localStorage.length; i++) {
+    let text =  localStorage.key(i);
+    let retrievedObject = localStorage.getItem(text);
+    console.log('retrievedObject: ', JSON.parse(retrievedObject));
 
+    let item =JSON.parse(retrievedObject);
+    document.getElementById("btnAmount"+localStorage.key(i)).addEventListener('change', function(event) {
+      //alert(document.getElementById("btnAmount"+localStorage.key(i)).value)
+      let total = event.target.value * item['price']
+      document.getElementById('totalprice' + item['id']).innerHTML = total + 'vnd'
+      //let totalBill = 
+      //document.getElementById('totalprice' + item['id']).innerHTML = total + 'vnd'
+    })
+  }
+  document.getElementById('btn-next').addEventListener('click', function(){
+    let total = 0
+    for(var i=0; i < localStorage.length; i++){
+      let text =  localStorage.key(i);
+      let retrievedObject = localStorage.getItem(text);
+      console.log('retrievedObject: ', JSON.parse(retrievedObject));
+  
+      let item =JSON.parse(retrievedObject);
+      total = total + item['price'] * document.getElementById('btnAmount' + item['id']).value
+    }
+    document.getElementById('totalBill').innerHTML = total + 'vnd'
+  })
 }
+
 
 
 
