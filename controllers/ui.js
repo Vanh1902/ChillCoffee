@@ -84,10 +84,7 @@ let loadBill = async function() {
   let response = await fetch("./views/cart.html");
   let result = await response.text()
   shop_content.innerHTML = result;
-  document.getElementById('btn-Delivery').addEventListener('click', ()=>{
-    console.log('pressed Profile');
-    renderProfile();
-  });
+
 }
 
 let loadAboutus = async function() {
@@ -177,9 +174,8 @@ let loadCart = async function() {
     let item =JSON.parse(retrievedObject); 
     let cart = resultCard.replace('{#name}',item['name']).replace('{#price}',item['price'])
     .replace('{#number}',i+1).replace('{#image}', item['img']).replace('{#btnAmount}',item['id'])
-    .replace('{#idPrice}' , item['id'])
+    .replace('{#idPrice}' , item['id']).replace('{#idDelete}' , item['id'])
     document.getElementById('product').innerHTML += cart
-    
   }
   
 
@@ -195,6 +191,11 @@ let loadCart = async function() {
       document.getElementById('totalprice' + item['id']).innerHTML = total + 'vnd'
       //let totalBill = 
       //document.getElementById('totalprice' + item['id']).innerHTML = total + 'vnd'
+      
+    })
+    document.getElementById('btn-delete' + item['id']).addEventListener('click', function(){
+      localStorage.removeItem(item['id'])
+      location.reload();
     })
   }
   document.getElementById('btn-next').addEventListener('click', function(){
