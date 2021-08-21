@@ -174,7 +174,7 @@ let loadCart = async function() {
     let item =JSON.parse(retrievedObject); 
     let cart = resultCard.replace('{#name}',item['name']).replace('{#price}',item['price'])
     .replace('{#number}',i+1).replace('{#image}', item['img']).replace('{#btnAmount}',item['id'])
-    .replace('{#idPrice}' , item['id']).replace('{#idDelete}' , item['id'])
+    .replace('{#idPrice}' , item['id']).replace('{#idDelete}' , item['id']).replace('{#btnId}', item['id'])
     document.getElementById('product').innerHTML += cart
   }
   
@@ -195,7 +195,7 @@ let loadCart = async function() {
     })
     document.getElementById('btn-delete' + item['id']).addEventListener('click', function(){
       localStorage.removeItem(item['id'])
-      location.reload();
+      document.getElementById('line'+item['id']).innerHTML = ""
     })
   }
   document.getElementById('btn-next').addEventListener('click', function(){
@@ -207,8 +207,19 @@ let loadCart = async function() {
   
       let item =JSON.parse(retrievedObject);
       total = total + item['price'] * document.getElementById('btnAmount' + item['id']).value
+      document.getElementById('btnAmount' + item['id']).disabled = true
+      document.getElementById('btn-delete' + item['id']).disabled = true
+
     }
+    document.getElementById('1-name').disabled = false
+    document.getElementById('2-name').disabled = false
+    document.getElementById('address').disabled = false
+    document.getElementById('phone').disabled = false
+    document.getElementById('information').disabled = false
+    document.getElementById('not_robot').disabled = false
+    document.getElementById('signup').disabled = false
     document.getElementById('totalBill').innerHTML = total + 'vnd'
+
   })
 }
 
