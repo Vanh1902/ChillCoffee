@@ -1,4 +1,4 @@
-import { signUp,signIn, resetPassword} from "./  authen.js";
+import { signUp,signIn, resetPassword} from "./authen.js";
 // Bước 1: Khởi tạo các thành phần
 var shop_menu = document.createElement('div');
 var shop_content = document.createElement('div');
@@ -178,8 +178,6 @@ let loadCart = async function() {
     .replace('{#idPrice}' , item['id']).replace('{#idDelete}' , item['id']).replace('{#btnId}', item['id'])
     document.getElementById('product').innerHTML += cart
   }
-  
-
   for(var i =0; i < localStorage.length; i++) {
     let text =  localStorage.key(i);
     let retrievedObject = localStorage.getItem(text);
@@ -221,19 +219,46 @@ let loadCart = async function() {
     document.getElementById('totalBill').innerHTML = total + 'vnd'
 
   })
+  document.getElementById('btn-profile').addEventListener('click', function(){
+    let name_1 = document.getElementById('1-name').value
+    let name_2 = document.getElementById('2-name') .value
+    let address = document.getElementById('address') .value
+    let phone = document.getElementById('phone') .value
+    let note = document.getElementById('information') .value
+    
+  
+    //   if (name_1 == "" || name_2 == "" || address == "" || phone == "" || note == ""){
+    //     alert("please enter all the box")
+    //    }
+      var values = [],
+      keys = Object.keys(localStorage),
+      i = keys.length;
+
+  while ( i-- ) {
+      values.push( localStorage.getItem(keys[i]) );
+  }
+  alert(values)
+    firebase.firestore().collection("bill").add({
+        firsname:name_1,
+        lastname: name_2,
+        address: address,
+        phone: phone,
+        information: note,
+        products: values,
+        //products: localStorage.get
+      })
+      .then((docRef) => {
+          console.log("Document written with ID: ", docRef.id);
+      })
+      .catch((error) => {
+          console.error("Error adding document: ", error);
+      });
+     
+    })
+  
   
 }
-document.getElementById('btn-profile').addEventListener('click', function(){
-  let name_1 = document.getElementById('1-name') 
-  let name_2 = document.getElementById('2-name') 
-  let address = document.getElementById('address') 
-  let phone = document.getElementById('phone') 
-  let note = document.getElementById('information') 
 
-    if (name_1 == "" || name_2 == "" || address == "" || phone == "" || note == ""){
-      alert("please enter all the box")
-     }
-  })
 
 
 
