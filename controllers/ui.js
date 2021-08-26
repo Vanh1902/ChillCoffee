@@ -1,4 +1,4 @@
-import { signUp,signIn, resetPassword} from "./authen.js";
+import { signUp,signIn, resetPassword} from "./  authen.js";
 // Bước 1: Khởi tạo các thành phần
 var shop_menu = document.createElement('div');
 var shop_content = document.createElement('div');
@@ -28,6 +28,7 @@ let getMenu = async function() {
       loadHome()
       renderCoffee()
   });
+  
   
   document.getElementById('btnCategory').addEventListener('click', ()=>{
     // this.prev_image();   
@@ -216,12 +217,23 @@ let loadCart = async function() {
     document.getElementById('address').disabled = false
     document.getElementById('phone').disabled = false
     document.getElementById('information').disabled = false
-    document.getElementById('not_robot').disabled = false
-    document.getElementById('signup').disabled = false
+    document.getElementById('btn-profile').disabled = false
     document.getElementById('totalBill').innerHTML = total + 'vnd'
 
   })
+  
 }
+document.getElementById('btn-profile').addEventListener('click', function(){
+  let name_1 = document.getElementById('1-name') 
+  let name_2 = document.getElementById('2-name') 
+  let address = document.getElementById('address') 
+  let phone = document.getElementById('phone') 
+  let note = document.getElementById('information') 
+
+    if (name_1 == "" || name_2 == "" || address == "" || phone == "" || note == ""){
+      alert("please enter all the box")
+     }
+  })
 
 
 
