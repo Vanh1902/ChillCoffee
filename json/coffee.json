@@ -184,7 +184,7 @@
     "id": 23,
     "name": "MOUSSE RED VELVET",
     "type": "món ăn",
-    "mota":"",
+    "mota":" ",
     "price": 29000 ,
     "img": "https://product.hstatic.net/1000075078/product/red-velvet_bcc01eaaa9b14d9cb81aca612af917c8_master.jpg"
   },
@@ -192,6 +192,7 @@
     "id": 24,
     "name": "TIRAMISU",
     "type": "món ăn",
+    "mota":" ",
     "price": 32000 ,
     "img": "https://product.hstatic.net/1000075078/product/tiramisu_9d4baf1c996640a8b4516a2a5be4d43e_master.jpg"
   },
@@ -199,6 +200,7 @@
     "id": 25,
     "name": "MOCHI CREAMED CHOCOLATE",
     "type": "món ăn",
+    "mota":" ",
     "price": 19000 ,
     "img": "https://product.hstatic.net/1000075078/product/mochi-choco_8165ee40058f4023a15783e3b7c014b6_master.jpg"
   },
@@ -206,6 +208,7 @@
     "id": 26,
     "name": "MOCHI CREAMED RASPBERRY",
     "type": "món ăn",
+    "mota":" ",
     "price": 19000 ,
     "img": "https://product.hstatic.net/1000075078/product/mochi_phuc_bon_tu-min_da7d85f8fb35493db0d58d96f06bd1ca_master.jpg"
   },  
@@ -213,6 +216,7 @@
     "id": 27,
     "name": "MOCHI CREAMED BLUEBERRY",
     "type": "món ăn",
+    "mota":" ",
     "price": 19000,
     "img": "https://product.hstatic.net/1000075078/product/mochi_viet_quat_10d54f1edf254e4aa391ba0a93338f84_master.jpg"
   }

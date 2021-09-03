@@ -186,6 +186,26 @@ let loadCart = async function() {
     let item =JSON.parse(retrievedObject);
     document.getElementById("btnAmount"+localStorage.key(i)).addEventListener('change', function(event) {
       //alert(document.getElementById("btnAmount"+localStorage.key(i)).value)
+      if (event.target.value < 1) {
+        event.target.value = 0
+      }
+      if (event.target.value > 10) {
+        event.target.value = 10
+      }
+      let total = event.target.value * item['price']
+      document.getElementById('totalprice' + item['id']).innerHTML = total + 'vnd'
+      //let totalBill = 
+      //document.getElementById('totalprice' + item['id']).innerHTML = total + 'vnd'
+      
+    })
+    document.getElementById("btnAmount"+localStorage.key(i)).addEventListener('keyup', function(event) {
+      //alert(document.getElementById("btnAmount"+localStorage.key(i)).value)
+      if (event.target.value < 1) {
+        event.target.value = 0
+      }
+      if (event.target.value > 10) {
+        event.target.value = 10
+      }
       let total = event.target.value * item['price']
       document.getElementById('totalprice' + item['id']).innerHTML = total + 'vnd'
       //let totalBill = 
@@ -215,11 +235,11 @@ let loadCart = async function() {
     document.getElementById('address').disabled = false
     document.getElementById('phone').disabled = false
     document.getElementById('information').disabled = false
-    document.getElementById('btn-profile').disabled = false
+    document.getElementById('btn-submit').disabled = false
     document.getElementById('totalBill').innerHTML = total + 'vnd'
 
   })
-  document.getElementById('btn-profile').addEventListener('click', function(){
+  document.getElementById('btn-submit').addEventListener('click', function(){
     let name_1 = document.getElementById('1-name').value
     let name_2 = document.getElementById('2-name') .value
     let address = document.getElementById('address') .value
@@ -227,37 +247,90 @@ let loadCart = async function() {
     let note = document.getElementById('information') .value
     
   
-    //   if (name_1 == "" || name_2 == "" || address == "" || phone == "" || note == ""){
-    //     alert("please enter all the box")
-    //    }
+    if(checkPhoneNumber(phone) && checkName(name_1) && checkName(name_2) && checkName(note) && checkAdress(address)) {
       var values = [],
       keys = Object.keys(localStorage),
       i = keys.length;
 
-  while ( i-- ) {
-      values.push( localStorage.getItem(keys[i]) );
-  }
-  alert(values)
-    firebase.firestore().collection("bill").add({
-        firsname:name_1,
-        lastname: name_2,
-        address: address,
-        phone: phone,
-        information: note,
-        products: values,
-        //products: localStorage.get
+      while ( i-- ) {
+          values.push( localStorage.getItem(keys[i]) );
+      }
+      firebase.firestore().collection("bill").add({
+          firsname:name_1,
+          lastname: name_2,
+          address: address,
+          phone: phone,
+          information: note,
+          products: values, 
+          //products: localStorage.get
       })
       .then((docRef) => {
           console.log("Document written with ID: ", docRef.id);
+          localStorage.clear();
+          window.location.href = "./success.html"
       })
       .catch((error) => {
           console.error("Error adding document: ", error);
       });
-     
-    })
-  
-  
+    }
+  })
 }
+
+function checkName(inputtxt)
+{
+  var  name= /^[a-z ,.'-]+$/
+  if(inputtxt.match(name))
+  {
+      return true;
+  }
+  else
+  {
+    alert("Name is invalid");
+    return false;
+  }
+}
+function checkPhoneNumber (inputtxt)
+{
+  var phoneno = /^\d{10}$/
+  if(inputtxt.match(phoneno))
+  {
+      return true;
+  }
+  else
+  {
+    alert("Phone number is invalid");
+    return false;
+  }
+}
+
+function checkNumber (inputtxt)
+{
+  var phoneno = /^\d{10}$/
+  if(inputtxt.match(phoneno))
+  {
+      return true;
+  }
+  else
+  {
+    alert("Số lượng từ 1 -10");
+    return false;
+  }
+}
+
+function checkAdress(inputtxt)
+{
+  var address = /^[a-z,0-9]/
+  if(inputtxt.match(address))
+  {
+      return true;
+  }
+  else
+  {
+    alert("No address");
+    return false;
+  }
+}
+
 
 
 

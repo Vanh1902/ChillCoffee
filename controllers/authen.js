@@ -11,7 +11,7 @@ let signUp = function()  {
             // ...
             //console.log(userCredential)
             alert("Success")
-            
+            location.replace("index.html")
         })
         .catch((error) => {
             //var errorCode = error.code;
